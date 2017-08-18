@@ -7,4 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'HelloWorld' => array($baseDir . '/src'),
+    '' => array($vendorDir . '/opauth/facebook'),
 );

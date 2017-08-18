@@ -1,5 +1,5 @@
 {
-    "name": "juniorgrossi/hello-world",
+    "name": "nitesh/hello-world",
     "description": "My first Composer project",
     "authors": [
         {
@@ -7,13 +7,14 @@
             "email": "your@name.com"
         }
     ],
-    "minimum-stability": "dev",
-    "require": {
-        "php": ">=5.3.0"
-    },
+    "minimum-stability": "dev",   
     "autoload": {
         "psr-0": {
             "HelloWorld": "src/"
         }
+    },
+    "require": {
+        "0szx0/hello": "dev-master",
+        "opauth/facebook": "dev-master"
     }
 }

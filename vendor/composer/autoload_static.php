@@ -16,10 +16,21 @@ class ComposerStaticInit5d34be0dfbccefdf5328aa6652a8828c
         ),
     );
 
+    public static $fallbackDirsPsr0 = array (
+        0 => __DIR__ . '/..' . '/opauth/facebook',
+    );
+
+    public static $classMap = array (
+        'Opauth' => __DIR__ . '/..' . '/opauth/opauth/lib/Opauth/Opauth.php',
+        'OpauthStrategy' => __DIR__ . '/..' . '/opauth/opauth/lib/Opauth/OpauthStrategy.php',
+    );
+
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
             $loader->prefixesPsr0 = ComposerStaticInit5d34be0dfbccefdf5328aa6652a8828c::$prefixesPsr0;
+            $loader->fallbackDirsPsr0 = ComposerStaticInit5d34be0dfbccefdf5328aa6652a8828c::$fallbackDirsPsr0;
+            $loader->classMap = ComposerStaticInit5d34be0dfbccefdf5328aa6652a8828c::$classMap;
 
         }, null, ClassLoader::class);
     }
